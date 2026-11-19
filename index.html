@@ -1,1 +1,53 @@
 
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f2e9">
+  <title>Bizden Kalan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Bizden Kalan</h1>
+    <p>Birlikte biriktirdiğimiz güzel anılar.</p>
+  </header>
+
+  <main id="app">
+    <section class="welcome">
+      <h2>Bizim hikâyemiz ❤️</h2>
+      <p>Her güzel anı, birlikte yazılan bir hikâyedir.</p>
+    </section>
+
+    <nav class="navigation">
+      <button data-page="home">Ana Sayfa</button>
+      <button data-page="memories">Anılarımız</button>
+      <button data-page="story">Hikâyemiz</button>
+      <button data-page="letters">Mektuplar</button>
+    </nav>
+
+    <section id="home" class="page active">
+      <h2>Hoş geldiniz</h2>
+      <p>Bizden kalan her şey burada saklı.</p>
+    </section>
+
+    <section id="memories" class="page">
+      <h2>Anı günlüğümüz</h2>
+      <p>Güzel anılarımızı burada biriktireceğiz.</p>
+    </section>
+
+    <section id="story" class="page">
+      <h2>Bizim hikâyemiz</h2>
+      <textarea placeholder="Hikâyemizi buraya yazalım..."></textarea>
+    </section>
+
+    <section id="letters" class="page">
+      <h2>Mektuplarımız</h2>
+      <textarea placeholder="Birbirimize yazdığımız mektuplar..."></textarea>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
