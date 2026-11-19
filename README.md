@@ -1,2 +1,2 @@
 # BizimHikaye
-Anılarla dolu geçmiş fotoğraf albümü 
+Birlikte biriktirdiğimiz anılar
