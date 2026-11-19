@@ -1,1 +1,121 @@
 
+:root {
+  --cream: #f7f2e9;
+  --white: #fffdf9;
+  --brown: #795d49;
+  --dark: #35291f;
+  --muted: #998879;
+  --line: #e9dfd3;
+  --shadow: 0 8px 25px rgba(65, 45, 30, .08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background: var(--cream);
+  color: var(--dark);
+  font-family: Georgia, serif;
+}
+
+.header {
+  text-align: center;
+  padding: 30px 15px;
+}
+
+.header h1 {
+  color: var(--brown);
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: var(--muted);
+}
+
+#app {
+  max-width: 700px;
+  margin: auto;
+}
+
+.welcome {
+  background: var(--white);
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.welcome h2 {
+  color: var(--brown);
+}
+
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+button {
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--brown);
+  border-radius: 12px;
+  padding: 12px 15px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover,
+button.active {
+  background: var(--brown);
+  color: white;
+}
+
+.page {
+  display: none;
+  width: 100%;
+  padding: 25px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.page.active {
+  display: block;
+}
+
+.page h2 {
+  color: var(--brown);
+}
+
+textarea {
+  width: 100%;
+  min-height: 140px;
+  padding: 15px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--cream);
+  font: inherit;
+  resize: vertical;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+
+  .header h1 {
+    font-size: 27px;
+  }
+
+  .navigation button {
+    flex: 1 1 40%;
+  }
+}
