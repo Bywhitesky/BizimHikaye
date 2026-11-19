@@ -5,49 +5,152 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#f7f2e9">
-  <title>Bizden Kalan</title>
+  <meta name="description" content="Birlikte biriktirdiğimiz anılar, hikâyeler ve aile hatıralarımız.">
+  <title>Bizden Kalan | Aile Arşivimiz</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
   <header class="header">
+    <p>♥ BİRLİKTE BİRİKTİRDİĞİMİZ</p>
     <h1>Bizden Kalan</h1>
-    <p>Birlikte biriktirdiğimiz güzel anılar.</p>
+    <p>Ailemizin hikâyesi, anılarımız ve geleceğimiz.</p>
   </header>
 
   <main id="app">
+
     <section class="welcome">
-      <h2>Bizim hikâyemiz ❤️</h2>
-      <p>Her güzel anı, birlikte yazılan bir hikâyedir.</p>
+      <p>SEVGİYLE SAKLANAN HATIRALAR</p>
+      <h2>Her güzel hikâye<br>birlikte başlar. ♥</h2>
+      <p>Bugün bir anı, yarın paha biçilemez bir hatıra.</p>
     </section>
 
-    <nav class="navigation">
-      <button data-page="home">Ana Sayfa</button>
+    <nav class="navigation" aria-label="Ana menü">
+      <button class="active" data-page="home">Ana Sayfa</button>
       <button data-page="memories">Anılarımız</button>
       <button data-page="story">Hikâyemiz</button>
+      <button data-page="dates">Özel Günler</button>
+      <button data-page="places">Gezdiğimiz Yerler</button>
       <button data-page="letters">Mektuplar</button>
+      <button data-page="family">Ailemiz</button>
+      <button data-page="book">Anı Kitabımız</button>
     </nav>
 
+    <!-- ANA SAYFA -->
     <section id="home" class="page active">
-      <h2>Hoş geldiniz</h2>
-      <p>Bizden kalan her şey burada saklı.</p>
+      <p>HOŞ GELDİNİZ</p>
+      <h2>Aile arşivimize hoş geldiniz.</h2>
+      <p>Birlikte yaşadığımız güzel günleri burada saklayacağız.</p>
+
+      <div class="welcome">
+        <h3>Bizim küçük dünyamız ♥</h3>
+        <p>Her fotoğrafın bir hikâyesi, her hikâyenin bir hatırası var.</p>
+      </div>
+
+      <h3>Arşivimiz</h3>
+      <p>Henüz anı eklenmedi. İlk anımızı birlikte oluşturalım.</p>
     </section>
 
+    <!-- ANILAR -->
     <section id="memories" class="page">
-      <h2>Anı günlüğümüz</h2>
-      <p>Güzel anılarımızı burada biriktireceğiz.</p>
+      <p>HATIRALARIMIZ</p>
+      <h2>Anı Günlüğümüz</h2>
+      <p>En güzel günlerimizi, fotoğraflarımızı ve yaşadıklarımızı burada saklayacağız.</p>
+
+      <input type="text" id="memoryTitle" placeholder="Anının başlığı">
+      <input type="date" id="memoryDate">
+      <textarea id="memoryNote" placeholder="Bu güzel günü anlat..."></textarea>
+      <button type="button" id="addMemory">Anı Ekle</button>
+
+      <div id="memoryList"></div>
     </section>
 
+    <!-- HİKÂYEMİZ -->
     <section id="story" class="page">
-      <h2>Bizim hikâyemiz</h2>
-      <textarea placeholder="Hikâyemizi buraya yazalım..."></textarea>
+      <p>BİZİM HİKÂYEMİZ</p>
+      <h2>Birlikte başlayan yolculuk...</h2>
+      <p>Tanıştığımız günden bugüne kadar hikâyemizi burada anlatacağız.</p>
+
+      <textarea id="storyText" placeholder="Bizim hikâyemiz..."></textarea>
+      <button type="button" id="saveStory">Hikâyeyi Kaydet</button>
     </section>
 
-    <section id="letters" class="page">
-      <h2>Mektuplarımız</h2>
-      <textarea placeholder="Birbirimize yazdığımız mektuplar..."></textarea>
+    <!-- ÖZEL GÜNLER -->
+    <section id="dates" class="page">
+      <p>TAKVİMİMİZ</p>
+      <h2>Özel Günlerimiz</h2>
+      <p>Unutmak istemediğimiz bütün güzel tarihler.</p>
+
+      <input type="text" id="dateTitle" placeholder="Özel günün adı">
+      <input type="date" id="specialDate">
+      <button type="button" id="addDate">Tarihi Ekle</button>
+
+      <div id="dateList"></div>
     </section>
+
+    <!-- GEZİLER -->
+    <section id="places" class="page">
+      <p>YOLCULUKLARIMIZ</p>
+      <h2>Gezdiğimiz Yerler</h2>
+      <p>Birlikte keşfettiğimiz şehirler ve güzel mekanlar.</p>
+
+      <input type="text" id="placeTitle" placeholder="Gezdiğimiz yer">
+      <input type="date" id="placeDate">
+      <textarea id="placeNote" placeholder="Bu geziden kalanlar..."></textarea>
+      <button type="button" id="addPlace">Yer Ekle</button>
+
+      <div id="placeList"></div>
+    </section>
+
+    <!-- MEKTUPLAR -->
+    <section id="letters" class="page">
+      <p>KALPTEN KALBE</p>
+      <h2>Mektuplarımız</h2>
+      <p>Birbirimize yazdığımız, yıllar sonra tekrar okuyacağımız satırlar.</p>
+
+      <input type="text" id="letterTitle" placeholder="Mektubun başlığı">
+      <textarea id="letterText" placeholder="Sevdiğine söylemek istediklerin..."></textarea>
+      <button type="button" id="addLetter">Mektubu Kaydet</button>
+
+      <div id="letterList"></div>
+    </section>
+
+    <!-- AİLEMİZ -->
+    <section id="family" class="page">
+      <p>BİZİM AİLEMİZ</p>
+      <h2>Aile Arşivimiz</h2>
+      <p>Bu arşiv, ailemizin geçmişini ve geleceğini bir arada tutacak.</p>
+
+      <div class="welcome">
+        <h3>Aile üyelerimiz</h3>
+        <p>Kurucu: Sen</p>
+        <p>Eşin, çocukların ve davet ettiğin aile üyeleri.</p>
+      </div>
+
+      <p>Aile davetleri ve kullanıcı izinleri sonraki geliştirme aşamasında eklenecek.</p>
+    </section>
+
+    <!-- ANI KİTABI -->
+    <section id="book" class="page">
+      <p>ÖMÜRLÜK HATIRALAR</p>
+      <h2>Bizim Anı Kitabımız</h2>
+      <p>Biriktirdiğimiz fotoğrafları, mektupları ve hikâyeleri bir aile kitabına dönüştüreceğiz.</p>
+
+      <div class="welcome">
+        <h3>Bir ömürlük hikâye...</h3>
+        <p>En güzel anılarımız burada bir araya gelecek.</p>
+      </div>
+    </section>
+
   </main>
 
+  <footer style="text-align:center;padding:30px 10px;color:#998879;">
+    <p>Sevgiyle, Bizden Kalan ♥</p>
+    <small>Ailemizin hikâyesi hiç bitmesin.</small>
+  </footer>
+
   <script src="main.js"></script>
+
 </body>
 </html>
