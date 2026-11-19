@@ -1,0 +1,9 @@
+
+{
+  "appId": "com.bizdenkalan.app",
+  "appName": "Bizden Kalan",
+  "webDir": ".",
+  "server": {
+    "androidScheme": "https"
+  }
+}
